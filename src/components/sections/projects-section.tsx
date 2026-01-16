@@ -81,7 +81,7 @@ export default function ProjectsSection() {
       <div className="wrapper relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+            <h2 className="md:text-4xl text-3xl font-bold text-gray-900 dark:text-white mb-4">
               Featured Projects
             </h2>
             <div className="w-20 h-1 bg-primary-500 mx-auto rounded-full"></div>
@@ -108,6 +108,7 @@ export default function ProjectsSection() {
                             src={project.image}
                             alt={project.title}
                             fill
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                             className="object-cover rounded-lg"
                           />
                         ) : (

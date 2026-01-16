@@ -31,12 +31,12 @@ const skillCategories = [
 
 export default function SkillsSection() {
   return (
-    <section id="skills" className="py-20 dark:bg-dark-secondary bg-gray-50 relative overflow-hidden">
+    <section id="skills" className="py-12 md:py-20 dark:bg-dark-secondary bg-gray-50 relative overflow-hidden">
       <SectionGradient />
       <div className="wrapper relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Skills & Expertise
             </h2>
             <div className="w-20 h-1 bg-primary-500 mx-auto rounded-full"></div>

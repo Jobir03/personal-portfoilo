@@ -8,8 +8,8 @@ export default function HeroSection() {
   const [imageError, setImageError] = useState(false);
 
   return (
-    <section id="home" className="py-2 sm:py-0 relative overflow-hidden bg-white dark:bg-[#171F2E] flex">
-      <div className="max-w-4xl mx-auto relative w-full py-12">
+    <section id="home" className="md:py-2 relative overflow-hidden bg-white dark:bg-[#171F2E] flex">
+      <div className="max-w-4xl mx-auto relative w-full py-6 md:py-12">
         <div className="wrapper relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col items-center text-center">

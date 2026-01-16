@@ -53,11 +53,11 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 dark:bg-dark-secondary bg-white">
+    <section id="contact" className="py-12 md:py-20 dark:bg-dark-secondary bg-white">
       <div className="wrapper">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+            <h2 className="md:text-4xl text-3xl font-bold text-gray-900 dark:text-white mb-4">
               Get In Touch
             </h2>
             <div className="w-20 h-1 bg-primary-500 mx-auto rounded-full"></div>

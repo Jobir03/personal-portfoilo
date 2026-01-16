@@ -50,11 +50,11 @@ export default function ExperienceSection() {
     ];
 
     return (
-        <section id="experience" className="py-20 bg-white dark:bg-dark-secondary relative overflow-hidden">
+        <section id="experience" className="py-12 md:py-20 bg-white dark:bg-dark-secondary relative overflow-hidden">
             <div className="wrapper relative z-10">
                 <div className="max-w-4xl mx-auto">
                     <div className="text-center mb-12">
-                        <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+                        <h2 className="md:text-4xl text-2xl font-bold text-gray-900 dark:text-white mb-4">
                             Professional Experience
                         </h2>
                         <div className="w-20 h-1 bg-primary-500 mx-auto rounded-full"></div>
