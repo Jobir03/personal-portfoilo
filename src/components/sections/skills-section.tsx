@@ -3,7 +3,7 @@ import { SectionGradient } from "@/components/ui/section-gradient";
 const skillCategories = [
   {
     title: "Frontend",
-    skills: ["React.js", "Next.js", "Vue.js", "HTML", "CSS", "Tailwind", "Bootstrap"],
+    skills: ["JavaScript", "TypeScript", "React.js", "Next.js", "Vue.js", "HTML", "CSS", "Tailwind", "Bootstrap"],
   },
   {
     title: "Mobile",
@@ -19,7 +19,7 @@ const skillCategories = [
   },
   {
     title: "Other",
-    skills: ["REST APIs", "WebSocket", "Socket.io", "LLM API integration", "Canvas API"],
+    skills: ["REST APIs", "WebSocket", "Socket.io", "LLM API integration", "Canvas API", "STT/STT"],
   },
   {
     title: "Languages",

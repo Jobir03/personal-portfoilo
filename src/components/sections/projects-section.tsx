@@ -101,7 +101,7 @@ export default function ProjectsSection() {
                   onClick={() => project.image && setSelectedImage(project.image)}
                 >
                   <div className="w-full h-full flex items-center justify-center p-2">
-                    <div className="w-full h-full bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform duration-300">
+                    <div className="w-full h-full bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center relative overflow-hidden group-hover:scale-110 transition-transform duration-300">
                       {
                         project.image ? (
                           <Image
@@ -138,14 +138,14 @@ export default function ProjectsSection() {
                     </div>
                   </div>
                 </div>
-                <div className="p-6 flex flex-col grow">
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 tracking-tight">
+                <div className="p-4 flex flex-col grow">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1 tracking-tight">
                     {project.title}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm leading-relaxed grow line-clamp-3 min-h-[60px]">
+                  <p className="text-gray-600 dark:text-gray-400 mb-2 text-sm leading-normal grow line-clamp-3 min-h-[60px]">
                     {project.description}
                   </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="flex flex-wrap gap-2 mb-3">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
@@ -155,7 +155,7 @@ export default function ProjectsSection() {
                       </span>
                     ))}
                   </div>
-                  <div className="mt-auto pt-4 border-t border-gray-100 dark:border-gray-800">
+                  <div className="mt-auto pt-3 border-t border-gray-100 dark:border-gray-800">
                     <Link
                       href={project.link}
                       target="_blank"
