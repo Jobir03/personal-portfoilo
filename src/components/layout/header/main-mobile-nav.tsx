@@ -1,0 +1,119 @@
+'use client';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useState } from 'react';
+import { navItems } from './nav-items';
+import { cn } from '@/lib/utils';
+import { ChevronDownIcon } from '@/icons/icons';
+import { useScrollSpy } from '@/hooks/use-scroll-spy';
+
+interface MobileMenuProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+export default function MainMobileNav({ isOpen, onClose }: MobileMenuProps) {
+  const pathname = usePathname();
+  const [activeDropdown, setActiveDropdown] = useState('');
+
+  const sectionIds = navItems
+    .map((item) => (item.type === 'link' && item.href.startsWith('/#') ? item.href.substring(2) : ''))
+    .filter(Boolean);
+
+  const activeSectionId = useScrollSpy(sectionIds, 100);
+
+  const toggleDropdown = (key: string) => {
+    setActiveDropdown(activeDropdown === key ? '' : key);
+  };
+
+  if (!isOpen) return null;
+
+  return (
+    <div className="lg:hidden h-screen absolute top-full bg-white dark:bg-dark-primary w-full border-b border-gray-200 dark:border-gray-800">
+      <div className="flex flex-col justify-between">
+        <div className="flex-1 overflow-y-auto">
+          <div className="pt-2 pb-3 space-y-1 px-4 sm:px-6">
+            {navItems.map((item) => {
+              if (item.type === 'link') {
+                const isHashLink = item.href.startsWith('/#');
+                const targetId = isHashLink ? item.href.substring(2) : undefined;
+                const isActive = isHashLink
+                  ? activeSectionId === targetId
+                  : pathname === item.href;
+
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={onClose}
+                    className={cn(
+                      'block px-3 py-2 rounded-md text-sm font-medium text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors',
+                      {
+                        'text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/10': isActive,
+                      }
+                    )}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              }
+
+              if (item.type === 'dropdown') {
+                return (
+                  <div key={item.label}>
+                    <button
+                      onClick={() => toggleDropdown(item.label)}
+                      className={cn(
+                        'flex justify-between items-center w-full px-3 py-2 rounded-md text-sm font-medium' +
+                        ' text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700',
+                        {
+                          'text-gray-700 dark:text-gray-200': item.items.some(
+                            (subItem) => pathname.includes(subItem.href)
+                          ),
+                        }
+                      )}
+                    >
+                      <span>{item.label}</span>
+                      <span
+                        className={cn(
+                          'size-4 transition-transform duration-200',
+                          activeDropdown === item.label && 'rotate-180'
+                        )}
+                      >
+                        <ChevronDownIcon />
+                      </span>
+                    </button>
+
+                    {activeDropdown === item.label && (
+                      <div className="mt-2 space-y-1 pl-4">
+                        {item.items.map((subItem) => (
+                          <Link
+                            key={subItem.href}
+                            href={subItem.href}
+                            onClick={onClose}
+                            className={cn(
+                              'flex items-center px-3 py-2 gap-1.5 rounded-md text-sm font-medium text-gray-500' +
+                              ' dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700',
+                              {
+                                'px-2': 'icon' in subItem,
+                                'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200':
+                                  pathname.includes(subItem.href),
+                              }
+                            )}
+                          >
+                            <span>{subItem.label}</span>
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+            })}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  );
+}
