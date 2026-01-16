@@ -12,11 +12,11 @@ const onest = Onest({
 export const metadata: Metadata = {
   metadataBase: new URL("https://jobir-ashurov.uz"),
   title: {
-    default: "Jobir Ashurov | Senior Frontend Developer & MERN Stack Expert",
+    default: "Jobir Ashurov | Frontend Developer & MERN Stack Expert",
     template: "%s | Jobir Ashurov",
   },
   description:
-    "Jobir Ashurov is a professional Senior Frontend Developer and MERN Stack expert specializing in building high-performance, scalable web applications with Next.js, React, and TypeScript.",
+    "Jobir Ashurov is a professional Frontend Developer and MERN Stack expert specializing in building high-performance, scalable web applications with Next.js, React, and TypeScript.",
   keywords: [
     "Jobir Ashurov",
     "Jobir",
@@ -35,16 +35,21 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://jobir-ashurov.uz",
-    title: "Jobir Ashurov | Senior Frontend Developer & MERN Stack Expert",
+    title: "Jobir Ashurov | Frontend Developer & MERN Stack Expert",
     description:
-      "Explore the portfolio of Jobir Ashurov, a Senior Frontend Developer specializing in high-end web applications.",
+      "Explore the portfolio of Jobir Ashurov, a Frontend Developer specializing in high-end web applications.",
     siteName: "Jobir Ashurov Portfolio",
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jobir Ashurov | Senior Frontend Developer",
+    title: "Jobir Ashurov | Frontend Developer",
     description:
-      "Senior Frontend Developer & MERN Stack expert building the future of the web.",
+      "Frontend Developer & MERN Stack expert building the future of the web.",
     creator: "@jobirashurov", // Replace with actual handle if available
   },
   robots: {

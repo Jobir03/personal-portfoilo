@@ -3,6 +3,7 @@
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 @layer base {
+
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
@@ -46,17 +47,13 @@
   --shadow-ring: 0px 0px 0px 4px hsla(227, 100%, 63%, 0.12);
   --shadow-theme-md: 0px 8px 30px 0px rgba(12, 11, 25, 0.04);
 
-  --background-image-gradient-1: linear-gradient(
-    180deg,
-    #f8fcff 0%,
-    #f1efff 50%,
-    #f8dcff 100%
-  );
-  --background-image-gradient-2: linear-gradient(
-    97deg,
-    hsl(227 100% 63%) 0%,
-    hsl(227 100% 70%) 100%
-  );
+  --background-image-gradient-1: linear-gradient(180deg,
+      #f8fcff 0%,
+      #f1efff 50%,
+      #f8dcff 100%);
+  --background-image-gradient-2: linear-gradient(97deg,
+      hsl(227 100% 63%) 0%,
+      hsl(227 100% 70%) 100%);
 }
 
 .button-bg {
@@ -64,11 +61,9 @@
 }
 
 .tab-img-bg {
-  background: linear-gradient(
-    90deg,
-    rgba(255, 88, 213, 0.2) 0%,
-    rgba(78, 110, 255, 0.2) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(255, 88, 213, 0.2) 0%,
+      rgba(78, 110, 255, 0.2) 100%);
   position: relative;
   z-index: 20;
 }
@@ -91,11 +86,9 @@
 
 .tab-img-overlay {
   border-radius: 26px;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.3) 67.58%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.3) 67.58%,
+      rgba(255, 255, 255, 0) 100%);
   backdrop-filter: blur(18.81816291809082px);
   position: relative;
   z-index: 20;
@@ -119,11 +112,9 @@
 }
 
 @utility hero-glow-bg {
-  background-image: linear-gradient(
-    180deg,
-    hsla(227, 100%, 63%, 0) 0%,
-    hsl(227 100% 63%) 100%
-  );
+  background-image: linear-gradient(180deg,
+      hsla(227, 100%, 63%, 0) 0%,
+      hsl(227 100% 63%) 100%);
 }
 
 .core-feature-wrapper {
@@ -153,20 +144,16 @@
 }
 
 .dashboard-gradient {
-  background-image: linear-gradient(
-    92deg,
-    hsl(227 100% 63%) 0%,
-    hsl(227 100% 80%) 100%
-  );
+  background-image: linear-gradient(92deg,
+      hsl(227 100% 63%) 0%,
+      hsl(227 100% 80%) 100%);
 }
 
 [data-theme="light"] .widget-bg {
-  background-image: linear-gradient(
-    180deg,
-    #f8fcff 0%,
-    #f1efff 50%,
-    #f8dcff 100%
-  );
+  background-image: linear-gradient(180deg,
+      #f8fcff 0%,
+      #f1efff 50%,
+      #f8dcff 100%);
 }
 
 [data-theme="dark"] .widget-bg {
@@ -219,11 +206,9 @@
   left: 0;
   margin: -1.4px;
   border-radius: inherit;
-  background: linear-gradient(
-    to right,
-    rgba(255, 87, 213, 0.5),
-    rgba(78, 110, 255, 0.5)
-  );
+  background: linear-gradient(to right,
+      rgba(255, 87, 213, 0.5),
+      rgba(78, 110, 255, 0.5));
   z-index: -1;
 }
 
@@ -237,19 +222,15 @@
 }
 
 [data-theme="light"] .white-gradient {
-  background-image: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0) 0%,
-    #fff 44.75%
-  );
+  background-image: linear-gradient(180deg,
+      rgba(255, 255, 255, 0) 0%,
+      #fff 44.75%);
 }
 
 [data-theme="dark"] .white-gradient {
-  background-image: linear-gradient(
-    180deg,
-    rgba(23, 31, 46, 0) 0%,
-    #171f2e 44.75%
-  );
+  background-image: linear-gradient(180deg,
+      rgba(23, 31, 46, 0) 0%,
+      #171f2e 44.75%);
 }
 
 .gradient-btn {
@@ -272,13 +253,11 @@
 .history-item {
   position: relative;
   height: 40px;
-  mask-image: linear-gradient(
-    90deg,
-    #000,
-    #000 84%,
-    transparent 89%,
-    transparent
-  );
+  mask-image: linear-gradient(90deg,
+      #000,
+      #000 84%,
+      transparent 89%,
+      transparent);
 }
 
 .history-item:hover {
@@ -303,9 +282,11 @@
   0% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-10px);
   }
+
   100% {
     transform: translateY(0px);
   }
@@ -313,10 +294,12 @@
 
 /* Float vertically */
 @keyframes float-y {
+
   0%,
   100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
@@ -324,10 +307,12 @@
 
 /* Float horizontally */
 @keyframes float-x {
+
   0%,
   100% {
     transform: translateX(0);
   }
+
   50% {
     transform: translateX(10px);
   }
@@ -335,10 +320,12 @@
 
 /* Float diagonally */
 @keyframes float-xy {
+
   0%,
   100% {
     transform: translate(0, 0);
   }
+
   50% {
     transform: translate(10px, -10px);
   }
@@ -346,10 +333,12 @@
 
 /* Subtle slow float in reverse */
 @keyframes float-rev {
+
   0%,
   100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(8px);
   }
@@ -377,6 +366,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -386,4 +376,3 @@
 .animate-slide-up {
   animation: slide-up 0.3s ease-out;
 }
-
