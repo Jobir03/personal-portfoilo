@@ -77,6 +77,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <JSONLD />
+        <meta name="google-site-verification" content="y3FUkxFHRZZ3Mh7wUlxrGMIpFjSG8o38y6-cdZCW_y0" />
       </head>
       <body
         className={`bg-gray-50 dark:bg-dark-secondary min-h-screen flex flex-col ${onest.className}`}
